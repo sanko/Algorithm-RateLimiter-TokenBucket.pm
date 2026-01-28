@@ -26,12 +26,12 @@ Algorithm::RateLimiter::TokenBucket - Loop-agnostic Token Bucket Rate Limiter
 
 =head1 DESCRIPTION
 
-C<Algorithm::RateLimiter::TokenBucket> implements the L<token bucket|https://en.wikipedia.org/wiki/Token_bucket>>
+C<Algorithm::RateLimiter::TokenBucket> implements the L<token bucket|https://en.wikipedia.org/wiki/Token_bucket>
 algorithm for rate limiting. It is specifically designed to be B<loop-agnostic>, meaning it does not manage its own
 timers or background threads. Instead, you "drive" it by calling C<tick( )> with the amount of time that has passed.
 
-This makes it ideal for integration into event loops (like L<IO::Async>, or L<Mojo::IOLoop>) or high-performance
-network applications.
+This makes it ideal for integration into event loops (like L<IO::Async> or L<Mojo::IOLoop>) or high-performance network
+applications.
 
 =head1 METHODS
 
