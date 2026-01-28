@@ -1,4 +1,4 @@
-# Contributing to the infix FFI Library
+# Contributing to the Project
 
 First off, thank you for considering contributing!
 

@@ -18,7 +18,7 @@ subtest Consumption => sub {
 };
 subtest 'Ticking (Accumulation)' => sub {
     isa_ok my $rl = Algorithm::RateLimiter::TokenBucket->new( limit => 1000 ), ['Algorithm::RateLimiter::TokenBucket'];
-    ok $rl->consume(1000), 'consume(1000)';
+    ok $rl->consume(1000), 'consume( 1000 )';
     is $rl->available, 0, 'Started empty';
     note 'tick( 0.5 )';    # Tick 0.5 seconds -> should add 500 tokens
     $rl->tick(0.5);
@@ -31,7 +31,7 @@ subtest 'Dynamic Limit Updates' => sub {
     isa_ok my $rl = Algorithm::RateLimiter::TokenBucket->new( limit => 1000 ), ['Algorithm::RateLimiter::TokenBucket'];
     ok $rl->set_limit(5000), 'set_limit( 5000 )';
     is $rl->limit, 5000, 'limit updated';
-    ok $rl->consume(5000), 'consume(5000)';    # Simulate an initial burst
+    ok $rl->consume(5000), 'consume( 5000 )';    # Simulate an initial burst
     note 'tick( 1.0 )';
     $rl->tick(1.0), is $rl->available, 5000, 'accumulated at new rate';
 };

@@ -6,12 +6,12 @@ Until I have the version 1.0.0 release, I'll support only the last two minor ver
 
 | Version    | Supported          |
 | ---------- | ------------------ |
-| v2.0.x     | :white_check_mark: |
-| < v2.0.0   | :x:                |
+| v1.0.x     | :white_check_mark: |
+| < v1.0.0   | :x:                |
 
 # Reporting a Vulnerability
 
-If you have any issue regarding security, please disclose the information responsibly by sending a report to https://github.com/sanko/Net-BitTorrent.pm/security/advisories/new and *not* at the public issue tracker or via email.
+If you have any issue regarding security, please disclose the information responsibly by sending a report to the project's security advisory page and *not* at the public issue tracker or via email.
 
 # Vulnerability Disclosure Policy
 

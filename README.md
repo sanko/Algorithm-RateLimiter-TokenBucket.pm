@@ -28,8 +28,8 @@ while ( 1 ) {
 algorithm for rate limiting. It is specifically designed to be **loop-agnostic**, meaning it does not manage its own
 timers or background threads. Instead, you "drive" it by calling `tick( )` with the amount of time that has passed.
 
-This makes it ideal for integration into event loops (like [IO::Async](https://metacpan.org/pod/IO%3A%3AAsync) or [Mojo::IOLoop](https://metacpan.org/pod/Mojo%3A%3AIOLoop)) or high-performance
-network applications.
+This makes it ideal for integration into event loops (like [IO::Async](https://metacpan.org/pod/IO%3A%3AAsync) or [Mojo::IOLoop](https://metacpan.org/pod/Mojo%3A%3AIOLoop)) or high-performance network
+applications.
 
 # METHODS
 

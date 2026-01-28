@@ -24,10 +24,8 @@ class Algorithm::RateLimiter::TokenBucket v1.0.0 {
         my $allowed = ( $amount > $tokens ) ? $tokens : $amount;
         $allowed = 0 if $allowed < 0;
         $tokens -= $allowed;
-        return int($allowed);
+        int $allowed;
     }
-
-    method available () {
-        return $limit ? int($tokens) : 1_000_000_000;    # "Infinity"
-    }
-} 1;
+    method available () { $limit ? int($tokens) : 1_000_000_000 }    # Near enough to infinity for a network transfer
+};
+1;
